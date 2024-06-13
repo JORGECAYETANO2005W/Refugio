@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="inicio.css">
     <title>Inicia Sesion</title>
 </head>
 <body>
@@ -12,31 +13,41 @@
         <div class="form-content">
             <h1 id="title">Registro</h1>
             <form>
-                <div class="input-group">
-                    <div class="input-field" id="nameInput">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Nombre">
+                <div class="form-group">
+                    <div class="input-field" id="secretAnswerField">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="text" class="form-control" id="secretAnswer" placeholder="Nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios" required>
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Correo">
+                        <input type="email" class="form-control" placeholder="Correo" required>
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Contraseña">
+                        <input type="password" class="form-control" placeholder="Contraseña" minlength="8" maxlength="15" required>
                     </div>
-                    <p>Olvidades tu contraseña <a href="#">Click Aqui</a></p>
+                    <div class="input-field" id="confirmPasswordField" style="display: none;">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar Contraseña" minlength="8" maxlength="15" required>
+                    </div>
+                    <p>¿Olvidaste tu contraseña? <a href="RecupContra.html">Click Aquí</a></p>
                 </div>
                 <div class="btn-field">
-                    <button id="signUp" type="button">Registro</button>
-                    <button id="signIn" type="button" class="disable">Login</button>
+                    <button id="accept" type="submit" class="btn btn-success">Aceptar</button>
+                    <button id="cancel" type="reset" class="btn btn-secondary">Cancelar</button>
+                </div>
+                <div class="text-link mt-2">
+                    <a id="signUp" class="text-link">Registro</a>
+
+                    <a id="signIn" class="text-link disable">Login</a>
                 </div>
             </form>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-
-    
 </body>
 </html>

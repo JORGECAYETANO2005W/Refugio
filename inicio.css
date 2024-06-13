@@ -60,7 +60,7 @@ input::placeholder{
 }
 .input-field i{
     margin-left: 15px;
-    color: green;
+    color: rgb(9, 11, 9);
 }
 form p{
     color: #FFFFFF;
@@ -95,4 +95,9 @@ form p a{
     background-color: #EAEAEA;
     color: #2C2F35;
 
+}
+.text-link{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
